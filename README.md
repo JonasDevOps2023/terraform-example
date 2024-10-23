@@ -47,7 +47,7 @@ This example project demonstrates how to:
 - Access to a Kubernetes cluster.
 - Properly configured Kubernetes provider credentials.
 
-## Setup Rancher Desktop as Kubernetes environment
+#### Setup Rancher Desktop as Kubernetes environment
 
 To have a local Kubernetes environment to test out this project with, go to the [Rancher Installation page](https://docs.rancherdesktop.io/getting-started/installation#linux).  
 **Make sure to follow the instructions**
