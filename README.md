@@ -5,18 +5,18 @@ This repository contains a basic example of how to use Terraform with the `hashi
 ## Project Structure
 
 The project structure is as follows:
-root
-├── main.tf
-├── modules
-│   └── namespace
-│       ├── main.tf
-│       ├── outputs.tf
-│       └── variables.tf
-├── outputs.tf
-├── .terraform.lock.hcl
-├── terraform.tfstate
-├── terraform.tfvars
-└── variables.tf
+root  
+├── main.tf  
+├── modules  
+│   └── namespace  
+│       ├── main.tf  
+│       ├── outputs.tf  
+│       └── variables.tf  
+├── outputs.tf  
+├── .terraform.lock.hcl  
+├── terraform.tfstate  
+├── terraform.tfvars  
+└── variables.tf  
 
 
 ### Files and Directories:
