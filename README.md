@@ -47,6 +47,23 @@ This example project demonstrates how to:
 - Access to a Kubernetes cluster.
 - Properly configured Kubernetes provider credentials.
 
+## Setup Rancher Desktop as Kubernetes environment
+
+To have a local Kubernetes environment to test out this project with, go to the [Rancher Installation page](https://docs.rancherdesktop.io/getting-started/installation#linux).  
+**Make sure to follow the instructions**
+
+To install GPG and Pass you can issue the following command:
+```bash
+sudo apt install gpg pass
+```
+
+To make sure Traefik can handle the ports for this worksop example, it is important you issue the command 
+```bash
+sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80
+```
+
+Once Rancher Desktop is installed, start it and wait for it to warm up. Rancher will automatically create a kubeconfig for you in `~/.kube/config`, and no authorization is necessary.
+
 ### How to Run
 
 1. Clone this repository:
@@ -54,6 +71,8 @@ This example project demonstrates how to:
    git clone https://github.com/aiqueneldar/terraform-example.git
    cd terraform-example
    ```
+   
+   Take note that there is a terraform.tfstate included in the projekt. It is safe to delete this file before starting experimentation, and it is incurraged to do so.
 
 2. Initialize the Terraform configuration:
    ```bash
