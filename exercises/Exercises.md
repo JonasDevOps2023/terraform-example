@@ -82,7 +82,7 @@ To be able to see the Nginx default page in a browser we need to add to more thi
        labels = {
          app = "example-app"
        }
-   		namespace = module.namespace.namespace_id
+      namespace = module.namespace.namespace_id
      }
      spec {
        type = "ClusterIP"
@@ -104,20 +104,20 @@ To be able to see the Nginx default page in a browser we need to add to more thi
    resource "kubernetes_ingress_v1" "example-ingress" {
      metadata {
        name = "example-ingress"
-   		namespace = module.namespace.namespace_id
-   		annotations = {
-   			"traefik.ingress.kubernetes.io/router.entrypoints" = "web"
-   		}
+       namespace = module.namespace.namespace_id
+       annotations = {
+        "traefik.ingress.kubernetes.io/router.entrypoints" = "web"
+       }
      }
-   	
+   
      spec {
        ingress_class_name = "traefik"
        rule {
-   			host = "example.127.0.0.1.sslip.io"
+        host = "example.127.0.0.1.sslip.io"
          http {
            path {
              path = "/"
-   					path_type = "Prefix"
+             path_type = "Prefix"
              backend {
                service {
                  name = kubernetes_service.example-service.metadata.0.name
