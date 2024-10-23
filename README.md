@@ -51,8 +51,8 @@ This example project demonstrates how to:
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
-   cd Terraform/
+   git clone https://github.com/aiqueneldar/terraform-example.git
+   cd terraform-example
    ```
 
 2. Initialize the Terraform configuration:
@@ -74,6 +74,7 @@ This example project demonstrates how to:
 5. To destroy the resources:
    ```bash
    terraform destroy
+   ```
 
 ## Disclaimer
 
