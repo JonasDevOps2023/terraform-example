@@ -140,3 +140,8 @@ To be able to see the Nginx default page in a browser we need to add to more thi
    http://example.127.0.0.1.sslip.io
    ```
 
+## Exercise 4
+
+Take the new Service and Ingress resources and make a child modules of them inside the `modules` folder.
+
+When you do, you need to replace all `namespace = module.namespace.namespace_id` with some `var` value from an input variable you also need to define.
