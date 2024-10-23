@@ -82,7 +82,7 @@ To be able to see the Nginx default page in a browser we need to add to more thi
        labels = {
          app = "example-app"
        }
-      namespace = module.namespace.namespace_id
+       namespace = module.namespace.namespace_id
      }
      spec {
        type = "ClusterIP"
@@ -106,14 +106,14 @@ To be able to see the Nginx default page in a browser we need to add to more thi
        name = "example-ingress"
        namespace = module.namespace.namespace_id
        annotations = {
-        "traefik.ingress.kubernetes.io/router.entrypoints" = "web"
+         "traefik.ingress.kubernetes.io/router.entrypoints" = "web"
        }
      }
    
      spec {
        ingress_class_name = "traefik"
        rule {
-        host = "example.127.0.0.1.sslip.io"
+         host = "example.127.0.0.1.sslip.io"
          http {
            path {
              path = "/"
@@ -137,6 +137,6 @@ To be able to see the Nginx default page in a browser we need to add to more thi
 
 4. If everything worked you should now be able to access your Nginx in a webbrowser on the address;
    ```bash
-   example.127.0.0.1.sslip.io
+   http://example.127.0.0.1.sslip.io
    ```
 
