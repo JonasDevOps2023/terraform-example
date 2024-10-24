@@ -42,6 +42,7 @@ resource "kubernetes_deployment" "example" {
 
     template {
       metadata {
+        namespace = "web"
         labels = {
           test = "MyExampleApp"
         }
